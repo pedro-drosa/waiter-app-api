@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
-const CategorySchema = new Schema({
+const OrderSchema = new Schema({
   table: {
     type: String,
     required: true,
@@ -33,4 +33,4 @@ const CategorySchema = new Schema({
   },
 });
 
-export const Category = mongoose.model('Category', CategorySchema);
+export const Order = mongoose.model('Order', OrderSchema);
