@@ -2,11 +2,11 @@ import { resolve } from 'node:path';
 import { randomBytes } from 'node:crypto';
 import multer from 'multer';
 
-const DESTINATION = resolve(__dirname, '..', '..', 'uploads');
+export const UPLOADS_PATH = resolve(__dirname, '..', '..', 'uploads');
 
 const storage = multer.diskStorage({
   destination: (_request, _file, callback) => {
-    callback(null, DESTINATION);
+    callback(null, UPLOADS_PATH);
   },
   filename: (_request, file, callback) => {
     const HASH = randomBytes(16).toString('hex');
