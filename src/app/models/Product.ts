@@ -22,7 +22,7 @@ const ProductSchema = new Schema({
     type: [
       {
         icon: String,
-        name: Date,
+        name: String,
       },
     ],
     required: true,
