@@ -9,7 +9,7 @@ export async function createProduct(request: Request, response: Response) {
     description,
     imagePath: imageReceived?.filename,
     price: Number(price),
-    ingredients: JSON.parse(ingredients),
+    ingredients: ingredients ? JSON.parse(ingredients) : [],
     category,
   });
   return response.status(201).json(product);
