@@ -1,7 +1,8 @@
 import { Router } from 'express';
+import { listCategories } from '../useCases/listCategories';
 
 const categoryRouter = Router();
 
-categoryRouter.get('/', (req, res) => res.send('nodejs'));
+categoryRouter.get('/', listCategories);
 
 export default categoryRouter;
